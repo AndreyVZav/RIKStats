@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		B517A88B2DE33EB4009A2A89 /* BusinessLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B517A8852DE33EB4009A2A89 /* BusinessLogic.framework */; };
 		B517A88C2DE33EB4009A2A89 /* BusinessLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B517A8852DE33EB4009A2A89 /* BusinessLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B517A9482DE36DD1009A2A89 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B517A9472DE36DD1009A2A89 /* RealmSwift */; };
+		B517A94B2DE37345009A2A89 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B517A94A2DE37345009A2A89 /* RxCocoa */; };
+		B517A94D2DE37345009A2A89 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B517A94C2DE37345009A2A89 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B517A94D2DE37345009A2A89 /* RxSwift in Frameworks */,
+				B517A94B2DE37345009A2A89 /* RxCocoa in Frameworks */,
+				B517A9482DE36DD1009A2A89 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +127,9 @@
 			);
 			name = BusinessLogic;
 			packageProductDependencies = (
+				B517A9472DE36DD1009A2A89 /* RealmSwift */,
+				B517A94A2DE37345009A2A89 /* RxCocoa */,
+				B517A94C2DE37345009A2A89 /* RxSwift */,
 			);
 			productName = BusinessLogic;
 			productReference = B517A8852DE33EB4009A2A89 /* BusinessLogic.framework */;
@@ -178,8 +187,9 @@
 			mainGroup = B59500FE2DE3195500CE3BE4;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				B517A8912DE34063009A2A89 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				B517A8922DE340FD009A2A89 /* XCRemoteSwiftPackageReference "ChartView" */,
+				B517A9462DE36DD1009A2A89 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				B517A9492DE37345009A2A89 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B59501082DE3195500CE3BE4 /* Products */;
@@ -238,7 +248,7 @@
 		B517A88E2DE33EB4009A2A89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 22GRTKX5Z9;
@@ -249,6 +259,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -273,7 +284,7 @@
 		B517A88F2DE33EB4009A2A89 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 22GRTKX5Z9;
@@ -284,6 +295,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -517,14 +529,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B517A8912DE34063009A2A89 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		B517A8922DE340FD009A2A89 /* XCRemoteSwiftPackageReference "ChartView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AppPear/ChartView.git";
@@ -533,7 +537,41 @@
 				minimumVersion = 1.5.5;
 			};
 		};
+		B517A9462DE36DD1009A2A89 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		B517A9492DE37345009A2A89 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.9.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B517A9472DE36DD1009A2A89 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B517A9462DE36DD1009A2A89 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		B517A94A2DE37345009A2A89 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B517A9492DE37345009A2A89 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		B517A94C2DE37345009A2A89 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B517A9492DE37345009A2A89 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B59500FF2DE3195500CE3BE4 /* Project object */;
 }
