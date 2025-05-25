@@ -6,11 +6,46 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B517A88B2DE33EB4009A2A89 /* BusinessLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B517A8852DE33EB4009A2A89 /* BusinessLogic.framework */; };
+		B517A88C2DE33EB4009A2A89 /* BusinessLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B517A8852DE33EB4009A2A89 /* BusinessLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B517A8892DE33EB4009A2A89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B59500FF2DE3195500CE3BE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B517A8842DE33EB4009A2A89;
+			remoteInfo = BusinessLogic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B517A88D2DE33EB4009A2A89 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B517A88C2DE33EB4009A2A89 /* BusinessLogic.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B517A8852DE33EB4009A2A89 /* BusinessLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BusinessLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59501072DE3195500CE3BE4 /* RIKStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RIKStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		B517A8862DE33EB4009A2A89 /* BusinessLogic */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
 		B59501092DE3195500CE3BE4 /* RIKStats */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = RIKStats;
@@ -19,10 +54,18 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B517A8822DE33EB4009A2A89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B59501042DE3195500CE3BE4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B517A88B2DE33EB4009A2A89 /* BusinessLogic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				B59501092DE3195500CE3BE4 /* RIKStats */,
+				B517A8862DE33EB4009A2A89 /* BusinessLogic */,
 				B59501082DE3195500CE3BE4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,13 +85,47 @@
 			isa = PBXGroup;
 			children = (
 				B59501072DE3195500CE3BE4 /* RIKStats.app */,
+				B517A8852DE33EB4009A2A89 /* BusinessLogic.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		B517A8802DE33EB4009A2A89 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		B517A8842DE33EB4009A2A89 /* BusinessLogic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B517A8902DE33EB4009A2A89 /* Build configuration list for PBXNativeTarget "BusinessLogic" */;
+			buildPhases = (
+				B517A8802DE33EB4009A2A89 /* Headers */,
+				B517A8812DE33EB4009A2A89 /* Sources */,
+				B517A8822DE33EB4009A2A89 /* Frameworks */,
+				B517A8832DE33EB4009A2A89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B517A8862DE33EB4009A2A89 /* BusinessLogic */,
+			);
+			name = BusinessLogic;
+			packageProductDependencies = (
+			);
+			productName = BusinessLogic;
+			productReference = B517A8852DE33EB4009A2A89 /* BusinessLogic.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		B59501062DE3195500CE3BE4 /* RIKStats */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B59501122DE3195700CE3BE4 /* Build configuration list for PBXNativeTarget "RIKStats" */;
@@ -55,10 +133,12 @@
 				B59501032DE3195500CE3BE4 /* Sources */,
 				B59501042DE3195500CE3BE4 /* Frameworks */,
 				B59501052DE3195500CE3BE4 /* Resources */,
+				B517A88D2DE33EB4009A2A89 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B517A88A2DE33EB4009A2A89 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				B59501092DE3195500CE3BE4 /* RIKStats */,
@@ -80,6 +160,9 @@
 				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
+					B517A8842DE33EB4009A2A89 = {
+						CreatedOnToolsVersion = 16.3;
+					};
 					B59501062DE3195500CE3BE4 = {
 						CreatedOnToolsVersion = 16.3;
 					};
@@ -94,17 +177,29 @@
 			);
 			mainGroup = B59500FE2DE3195500CE3BE4;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B517A8912DE34063009A2A89 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				B517A8922DE340FD009A2A89 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B59501082DE3195500CE3BE4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				B59501062DE3195500CE3BE4 /* RIKStats */,
+				B517A8842DE33EB4009A2A89 /* BusinessLogic */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B517A8832DE33EB4009A2A89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B59501052DE3195500CE3BE4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +210,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B517A8812DE33EB4009A2A89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B59501032DE3195500CE3BE4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +226,85 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B517A88A2DE33EB4009A2A89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B517A8842DE33EB4009A2A89 /* BusinessLogic */;
+			targetProxy = B517A8892DE33EB4009A2A89 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		B517A88E2DE33EB4009A2A89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22GRTKX5Z9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.BusinessLogic;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B517A88F2DE33EB4009A2A89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22GRTKX5Z9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.BusinessLogic;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		B59501102DE3195700CE3BE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -307,6 +487,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B517A8902DE33EB4009A2A89 /* Build configuration list for PBXNativeTarget "BusinessLogic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B517A88E2DE33EB4009A2A89 /* Debug */,
+				B517A88F2DE33EB4009A2A89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B59501022DE3195500CE3BE4 /* Build configuration list for PBXProject "RIKStats" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -326,6 +515,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B517A8912DE34063009A2A89 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		B517A8922DE340FD009A2A89 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = B59500FF2DE3195500CE3BE4 /* Project object */;
 }

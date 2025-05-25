@@ -11,7 +11,9 @@ import SwiftUI
 struct RIKStatsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                StatisticsView()
+            }
         }
     }
 }
