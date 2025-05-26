@@ -1,5 +1,5 @@
 {
-  "originHash" : "c82c1bec69695c8e87acdb45f8fa2042e4637df1932d1de69317a3d2fba3aa1c",
+  "originHash" : "b474d6183125375814ee83de5e7a7b7f8ef8e82f2ec19ece5e5e3eeaee7ad2f6",
   "pins" : [
     {
       "identity" : "chartview",
@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-swift.git",
       "state" : {
-        "branch" : "master",
-        "revision" : "712c52af6ae1aaca9aec83f1a14f4e5d48e3a24c"
+        "revision" : "d94d44781167fbb8d7a46fb181e784a6446ca5c1",
+        "version" : "10.54.4"
       }
     },
     {

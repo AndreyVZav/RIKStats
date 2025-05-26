@@ -10,19 +10,33 @@ import RxSwift
 import RealmSwift
 
 public class StatisticsService {
-    private let realm = try! Realm()
+    
+    public init() {}
+    
+    private var realm: Realm {
+        do {
+            return try Realm()
+        } catch {
+            fatalError("Failed to initialize Realm: \(error)")
+        }
+    }
+    
     private let url = "http://test.rikmasters.ru/api/statistics/"
-
+    
     public func fetchStatistics() -> Observable<[Statistic]> {
         return NetworkManager.shared.fetch(urlString: url)
             .map { (response: StatisticsResponse) in
-                try! self.realm.write {
-                    self.realm.add(response.statistics, update: .modified)
+                do {
+                    try realm.write {
+                        realm.add(response.statistics, update: .modified)
+                    }
+                } catch {
+                    print("Realm write error: \(error)")
                 }
                 return response.statistics
             }
     }
-
+    
     public func getCachedStatistics() -> [Statistic] {
         return Array(realm.objects(Statistic.self))
     }

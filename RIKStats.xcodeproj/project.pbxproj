@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		B517A88B2DE33EB4009A2A89 /* BusinessLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B517A8852DE33EB4009A2A89 /* BusinessLogic.framework */; };
 		B517A88C2DE33EB4009A2A89 /* BusinessLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B517A8852DE33EB4009A2A89 /* BusinessLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B517A9482DE36DD1009A2A89 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B517A9472DE36DD1009A2A89 /* RealmSwift */; };
 		B517A94B2DE37345009A2A89 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B517A94A2DE37345009A2A89 /* RxCocoa */; };
 		B517A94D2DE37345009A2A89 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B517A94C2DE37345009A2A89 /* RxSwift */; };
+		B5DDF1212DE4A950009D0F51 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B5DDF1202DE4A950009D0F51 /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,15 +43,48 @@
 		B59501072DE3195500CE3BE4 /* RIKStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RIKStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		B517A8862DE33EB4009A2A89 /* BusinessLogic */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BusinessLogic;
-			sourceTree = "<group>";
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B5DDF14A2DE4AD6D009D0F51 /* Exceptions for "BusinessLogic" folder in "RIKStats" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				BusinessLogic.swift,
+				Models/Statistic.swift,
+				Models/User.swift,
+				Network/Endpoints.swift,
+				Network/NetworkManager.swift,
+				Services/StatisticsService.swift,
+				Services/UserService.swift,
+			);
+			target = B59501062DE3195500CE3BE4 /* RIKStats */;
 		};
+		B5DDF14B2DE4AD6D009D0F51 /* Exceptions for "BusinessLogic" folder in "BusinessLogic" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				BusinessLogic.swift,
+				Models/Statistic.swift,
+				Models/User.swift,
+				Network/Endpoints.swift,
+				Network/NetworkManager.swift,
+				Services/StatisticsService.swift,
+				Services/UserService.swift,
+			);
+			target = B517A8842DE33EB4009A2A89 /* BusinessLogic */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
 		B59501092DE3195500CE3BE4 /* RIKStats */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = RIKStats;
+			sourceTree = "<group>";
+		};
+		B5DDF1422DE4AD6D009D0F51 /* BusinessLogic */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B5DDF14A2DE4AD6D009D0F51 /* Exceptions for "BusinessLogic" folder in "RIKStats" target */,
+				B5DDF14B2DE4AD6D009D0F51 /* Exceptions for "BusinessLogic" folder in "BusinessLogic" target */,
+			);
+			path = BusinessLogic;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -63,7 +96,6 @@
 			files = (
 				B517A94D2DE37345009A2A89 /* RxSwift in Frameworks */,
 				B517A94B2DE37345009A2A89 /* RxCocoa in Frameworks */,
-				B517A9482DE36DD1009A2A89 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5DDF1212DE4A950009D0F51 /* RealmSwift in Frameworks */,
 				B517A88B2DE33EB4009A2A89 /* BusinessLogic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,11 +111,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B538A67E2DE477FA0052B874 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B59500FE2DE3195500CE3BE4 = {
 			isa = PBXGroup;
 			children = (
 				B59501092DE3195500CE3BE4 /* RIKStats */,
-				B517A8862DE33EB4009A2A89 /* BusinessLogic */,
+				B5DDF1422DE4AD6D009D0F51 /* BusinessLogic */,
+				B538A67E2DE477FA0052B874 /* Frameworks */,
 				B59501082DE3195500CE3BE4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -122,12 +163,8 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				B517A8862DE33EB4009A2A89 /* BusinessLogic */,
-			);
 			name = BusinessLogic;
 			packageProductDependencies = (
-				B517A9472DE36DD1009A2A89 /* RealmSwift */,
 				B517A94A2DE37345009A2A89 /* RxCocoa */,
 				B517A94C2DE37345009A2A89 /* RxSwift */,
 			);
@@ -151,9 +188,11 @@
 			);
 			fileSystemSynchronizedGroups = (
 				B59501092DE3195500CE3BE4 /* RIKStats */,
+				B5DDF1422DE4AD6D009D0F51 /* BusinessLogic */,
 			);
 			name = RIKStats;
 			packageProductDependencies = (
+				B5DDF1202DE4A950009D0F51 /* RealmSwift */,
 			);
 			productName = RIKStats;
 			productReference = B59501072DE3195500CE3BE4 /* RIKStats.app */;
@@ -188,8 +227,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				B517A8922DE340FD009A2A89 /* XCRemoteSwiftPackageReference "ChartView" */,
-				B517A9462DE36DD1009A2A89 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				B517A9492DE37345009A2A89 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				B5DDF11F2DE4A950009D0F51 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B59501082DE3195500CE3BE4 /* Products */;
@@ -537,14 +576,6 @@
 				minimumVersion = 1.5.5;
 			};
 		};
-		B517A9462DE36DD1009A2A89 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		B517A9492DE37345009A2A89 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -553,14 +584,17 @@
 				minimumVersion = 6.9.0;
 			};
 		};
+		B5DDF11F2DE4A950009D0F51 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.43.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B517A9472DE36DD1009A2A89 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B517A9462DE36DD1009A2A89 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
-		};
 		B517A94A2DE37345009A2A89 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B517A9492DE37345009A2A89 /* XCRemoteSwiftPackageReference "RxSwift" */;
@@ -570,6 +604,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B517A9492DE37345009A2A89 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		B5DDF1202DE4A950009D0F51 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B5DDF11F2DE4A950009D0F51 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
