@@ -7,7 +7,7 @@
 
 import Foundation
 import RxSwift
-import RealmSwift
+import RealmSwift//Missing required modules: 'Realm.Private', 'Realm', 'Realm.Swift'
 
 public class StatisticsService {
     
@@ -27,8 +27,8 @@ public class StatisticsService {
         return NetworkManager.shared.fetch(urlString: url)
             .map { (response: StatisticsResponse) in
                 do {
-                    try realm.write {
-                        realm.add(response.statistics, update: .modified)
+                    try self.realm.write {
+                        self.realm.add(response.statistics, update: .modified)
                     }
                 } catch {
                     print("Realm write error: \(error)")

@@ -27,8 +27,8 @@ public class UserService {
         return NetworkManager.shared.fetch(urlString: url)
             .map { (response: UsersResponse) in
                 do {
-                    try realm.write {
-                        realm.add(response.statistics, update: .modified)
+                    try self.realm.write {
+                        self.realm.add(response.users, update: .modified)
                     }
                 } catch {
                     print("Realm write error: \(error)")

@@ -12,6 +12,7 @@
 		B517A94B2DE37345009A2A89 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B517A94A2DE37345009A2A89 /* RxCocoa */; };
 		B517A94D2DE37345009A2A89 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B517A94C2DE37345009A2A89 /* RxSwift */; };
 		B5DDF1212DE4A950009D0F51 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B5DDF1202DE4A950009D0F51 /* RealmSwift */; };
+		B5DDF14D2DE4C209009D0F51 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B5DDF14C2DE4C209009D0F51 /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B59D389A2DE4E4D90089E4B9 /* Exceptions for "RIKStats" folder in "RIKStats" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B59501062DE3195500CE3BE4 /* RIKStats */;
+		};
 		B5DDF14A2DE4AD6D009D0F51 /* Exceptions for "BusinessLogic" folder in "RIKStats" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -75,6 +83,9 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B59501092DE3195500CE3BE4 /* RIKStats */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B59D389A2DE4E4D90089E4B9 /* Exceptions for "RIKStats" folder in "RIKStats" target */,
+			);
 			path = RIKStats;
 			sourceTree = "<group>";
 		};
@@ -94,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5DDF14D2DE4C209009D0F51 /* RealmSwift in Frameworks */,
 				B517A94D2DE37345009A2A89 /* RxSwift in Frameworks */,
 				B517A94B2DE37345009A2A89 /* RxCocoa in Frameworks */,
 			);
@@ -167,6 +179,7 @@
 			packageProductDependencies = (
 				B517A94A2DE37345009A2A89 /* RxCocoa */,
 				B517A94C2DE37345009A2A89 /* RxSwift */,
+				B5DDF14C2DE4C209009D0F51 /* RealmSwift */,
 			);
 			productName = BusinessLogic;
 			productReference = B517A8852DE33EB4009A2A89 /* BusinessLogic.framework */;
@@ -487,6 +500,7 @@
 				DEVELOPMENT_TEAM = 22GRTKX5Z9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RIKStats/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -516,6 +530,7 @@
 				DEVELOPMENT_TEAM = 22GRTKX5Z9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RIKStats/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -606,6 +621,11 @@
 			productName = RxSwift;
 		};
 		B5DDF1202DE4A950009D0F51 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B5DDF11F2DE4A950009D0F51 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		B5DDF14C2DE4C209009D0F51 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B5DDF11F2DE4A950009D0F51 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;

@@ -36,11 +36,11 @@ struct VisitorsBlockPlaceholder: View {
         }
     }
     
-    /// Преобразуем список статистик с type == "view" в удобные для графика значения
+    /// преобразуем список статистик с type == "view" в удобные для графика значения
     private var viewData: [VisitEntry] {
         let views = statistics.filter { $0.type == "view" }
         
-        // Сгруппировать все даты (Int timestamps) и посчитать количество на каждую дату
+        // сгруппировать все даты (Int timestamps) и посчитать количество на каждую дату
         var dateCounts: [Date: Int] = [:]
         for stat in views {
             for timestamp in stat.dates {
@@ -50,7 +50,7 @@ struct VisitorsBlockPlaceholder: View {
             }
         }
         
-        // Вернуть отсортированные по дате записи
+        // вернуть отсортированные по дате записи
         return dateCounts
             .map { VisitEntry(date: $0.key, count: $0.value) }
             .sorted { $0.date < $1.date }
