@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-public class User: Object, Decodable, Identifiable {
+public class User: Object, Decodable, Identifiable, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) public var id: Int
     @Persisted public var username: String
     @Persisted public var sex: String

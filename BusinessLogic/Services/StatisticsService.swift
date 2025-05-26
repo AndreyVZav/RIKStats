@@ -7,7 +7,7 @@
 
 import Foundation
 import RxSwift
-import RealmSwift//Missing required modules: 'Realm.Private', 'Realm', 'Realm.Swift'
+import RealmSwift
 
 public class StatisticsService {
     

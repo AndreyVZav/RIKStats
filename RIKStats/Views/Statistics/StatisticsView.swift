@@ -54,7 +54,7 @@ private extension StatisticsView {
             VStack(spacing: 24) {
                 VisitorsBlockPlaceholder(statistics: viewModel.statistics)
                 FrequentVisitorsPlaceholder()
-                GenderAgeChartPlaceholder()
+                GenderAgeChartPlaceholder(viewModel: viewModel)
                 SubscribersBlockPlaceholder()
             }
             .padding()
