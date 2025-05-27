@@ -27,9 +27,9 @@ struct VisitorsBlockPlaceholder: View {
                 .font(.title2).bold()
             
             HStack(alignment: .center, spacing: 12) {
-                Image(systemName: "chart.line.uptrend.xyaxis") // или кастомная иконка волны
+                Image("Frame9801")
                     .resizable()
-                    .frame(width: 30, height: 30)
+                    .frame(width: 95, height: 50)
                     .foregroundColor(.green)
                 
                 VStack(alignment: .leading, spacing: 4) {

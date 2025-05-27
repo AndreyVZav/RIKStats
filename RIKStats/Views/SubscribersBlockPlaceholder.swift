@@ -30,7 +30,7 @@ struct SubscribersBlockPlaceholder: View {
                     count: subscriptions,
                     prefix: "+",
                     title: "Новые наблюдатели в этом месяце",
-                    icon: "chart.line.uptrend.xyaxis",
+                    icon: "Frame9801",
                     color: Color(hex: "#4CCD99") // Зеленый
                 )
                 
@@ -39,7 +39,7 @@ struct SubscribersBlockPlaceholder: View {
                     count: unsubscriptions,
                     prefix: "-",
                     title: "Пользователей перестали за Вами наблюдать",
-                    icon: "chart.line.downtrend.xyaxis",
+                    icon: "Group9412",
                     color: Color(hex: "#FF4D4D") // Красный
                 )
             }
@@ -54,10 +54,10 @@ struct SubscribersBlockPlaceholder: View {
                 .frame(height: 60)
                 .overlay(
                     HStack(spacing: 12) {
-                        Image(systemName: icon)
+                        Image(icon)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 24, height: 24)
+                            .frame(width: 95, height: 50)
                             .foregroundColor(color)
                         
                         VStack(alignment: .leading, spacing: 4) {
