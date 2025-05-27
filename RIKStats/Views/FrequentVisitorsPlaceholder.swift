@@ -33,6 +33,7 @@ struct FrequentVisitorsPlaceholder: View {
                             }
                             .frame(width: 44, height: 44)
                             .clipShape(Circle())
+                            
 
                             VStack(alignment: .leading) {
                                 Text(user.username)
@@ -47,6 +48,9 @@ struct FrequentVisitorsPlaceholder: View {
                                     .fill(Color.green)
                                     .frame(width: 10, height: 10)
                             }
+                            
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(.gray)
                         }
                     }
                 }
