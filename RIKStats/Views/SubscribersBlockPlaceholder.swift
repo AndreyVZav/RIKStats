@@ -62,12 +62,12 @@ struct SubscribersBlockPlaceholder: View {
                         
                         VStack(alignment: .leading, spacing: 4) {
                             Text("\(prefix)\(count)")
-                                .font(.system(size: 16, weight: .semibold))
-                                .foregroundColor(color)
+                                .font(.gilroy(.bold, size: 20))
+                                .foregroundColor(.black)
                             
                             Text(title)
-                                .font(.system(size: 12))
-                                .foregroundColor(color.opacity(0.8))
+                                .font(.gilroy(.medium, size: 16))
+                                .foregroundColor(.gray)
                         }
                         
                         Spacer()

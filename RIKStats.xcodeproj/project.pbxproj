@@ -52,6 +52,16 @@
 			);
 			target = B59501062DE3195500CE3BE4 /* RIKStats */;
 		};
+		B59D38E72DE64A2C0089E4B9 /* Exceptions for "Resources" folder in "BusinessLogic" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Font/Fonts.swift,
+				"Font/Gilroy-Bold.ttf",
+				"Font/Gilroy-Medium.ttf",
+				"Font/Gilroy-SemiBold.ttf",
+			);
+			target = B517A8842DE33EB4009A2A89 /* BusinessLogic */;
+		};
 		B5DDF14A2DE4AD6D009D0F51 /* Exceptions for "BusinessLogic" folder in "RIKStats" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -87,6 +97,14 @@
 				B59D389A2DE4E4D90089E4B9 /* Exceptions for "RIKStats" folder in "RIKStats" target */,
 			);
 			path = RIKStats;
+			sourceTree = "<group>";
+		};
+		B59D38DE2DE64A2C0089E4B9 /* Resources */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B59D38E72DE64A2C0089E4B9 /* Exceptions for "Resources" folder in "BusinessLogic" target */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		B5DDF1422DE4AD6D009D0F51 /* BusinessLogic */ = {
@@ -135,6 +153,7 @@
 			children = (
 				B59501092DE3195500CE3BE4 /* RIKStats */,
 				B5DDF1422DE4AD6D009D0F51 /* BusinessLogic */,
+				B59D38DE2DE64A2C0089E4B9 /* Resources */,
 				B538A67E2DE477FA0052B874 /* Frameworks */,
 				B59501082DE3195500CE3BE4 /* Products */,
 			);
@@ -201,6 +220,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				B59501092DE3195500CE3BE4 /* RIKStats */,
+				B59D38DE2DE64A2C0089E4B9 /* Resources */,
 				B5DDF1422DE4AD6D009D0F51 /* BusinessLogic */,
 			);
 			name = RIKStats;
