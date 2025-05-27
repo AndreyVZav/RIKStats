@@ -19,9 +19,12 @@ struct GenderAgeChartPlaceholder: View {
        }
 
        private var genderStats: [GenderData] {
-           let males = viewModel.users.filter { $0.sex.lowercased() == "male" }.count
-           let females = viewModel.users.filter { $0.sex.lowercased() == "female" }.count
+           let males = viewModel.users.filter { $0.sex.uppercased() == "M" }.count
+           let females = viewModel.users.filter { $0.sex.uppercased() == "W" }.count
 
+           print("Males: \(males), Females: \(females)")
+           print("User sexes:", viewModel.users.map { $0.sex })
+           
            return [
                GenderData(gender: "Мужчины", count: males),
                GenderData(gender: "Женщины", count: females)
@@ -33,6 +36,10 @@ struct GenderAgeChartPlaceholder: View {
                Text("Распределение по полу")
                    .font(.title3).bold()
 
+               Text("Загружено пользователей: \(viewModel.users.count)")
+                   .font(.caption)
+                   .foregroundColor(.gray)
+               
                if genderStats.allSatisfy({ $0.count == 0 }) {
                    Text("Нет данных")
                        .foregroundColor(.gray)
@@ -53,6 +60,9 @@ struct GenderAgeChartPlaceholder: View {
            .padding()
            .onAppear {
                viewModel.loadCached()
+               if viewModel.users.isEmpty {
+                   viewModel.refresh()
+               }
            }
        }
-   }
+}
