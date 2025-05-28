@@ -32,14 +32,6 @@ struct StatisticsView: View {
 private extension StatisticsView {
     func onAppear() {
         viewModel.loadCached()
-        
-        for family in UIFont.familyNames {
-            print("Шрифт: \(family)")
-            for name in UIFont.fontNames(forFamilyName: family) {
-                print("-- \(name)")
-            }
-        }
-        
         if viewModel.users.isEmpty || viewModel.statistics.isEmpty {
             viewModel.refresh()
         }
