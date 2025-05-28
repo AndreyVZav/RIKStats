@@ -13,9 +13,9 @@ struct FrequentVisitorsPlaceholder: View {
     @State private var topUsers: [BusinessLogic.User] = []
 
         var body: some View {
-            VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .leading) {
                 Text("Чаще всех посещают Ваш профиль")
-                    .font(.title3).bold()
+                    .font(.gilroy(.bold, size: 20))
 
                 if topUsers.isEmpty {
                     Text("Нет данных")
@@ -23,18 +23,25 @@ struct FrequentVisitorsPlaceholder: View {
                 } else {
                     ForEach(topUsers) { user in
                         HStack {
-                            AsyncImage(url: URL(string: user.avatarURL)) { image in
-                                image
-                                    .resizable()
-                                    .scaledToFill()
-                            } placeholder: {
-                                Circle()
-                                    .fill(Color.gray.opacity(0.3))
+                            ZStack(alignment: .bottomTrailing) {
+                                AsyncImage(url: URL(string: user.avatarURL)) { image in
+                                    image
+                                        .resizable()
+                                        .scaledToFill()
+                                } placeholder: {
+                                    Circle()
+                                        .fill(Color.gray.opacity(0.3))
+                                    
+                                }
+                                .frame(width: 44, height: 44)
+                                .clipShape(Circle())
+                                
+                                if user.isOnline {
+                                    Circle()
+                                        .fill(Color.green)
+                                        .frame(width: 10, height: 10)
+                                }
                             }
-                            .frame(width: 44, height: 44)
-                            .clipShape(Circle())
-                            
-
                             VStack(alignment: .leading) {
                                 Text(user.username)
                                     .font(.headline)
@@ -43,11 +50,6 @@ struct FrequentVisitorsPlaceholder: View {
                                     .foregroundColor(.gray)
                             }
                             Spacer()
-                            if user.isOnline {
-                                Circle()
-                                    .fill(Color.green)
-                                    .frame(width: 10, height: 10)
-                            }
                             
                             Image(systemName: "chevron.right")
                                 .foregroundColor(.gray)

@@ -24,12 +24,12 @@ struct VisitorsBlockPlaceholder: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text("Посетители")
-                .font(.title2).bold()
+                .font(.gilroy(.bold, size: 24))
             
             HStack(alignment: .center, spacing: 12) {
-                Image(systemName: "chart.line.uptrend.xyaxis") // или кастомная иконка волны
+                Image("Frame9801")
                     .resizable()
-                    .frame(width: 30, height: 30)
+                    .frame(width: 95, height: 50)
                     .foregroundColor(.green)
                 
                 VStack(alignment: .leading, spacing: 4) {
@@ -40,7 +40,7 @@ struct VisitorsBlockPlaceholder: View {
                             .foregroundColor(.green)
                     }
                     Text("Количество посетителей в этом месяце выросло")
-                        .font(.footnote)
+                        .font(.gilroy(.medium, size: 16))
                         .foregroundColor(.gray)
                 }
                 
@@ -52,7 +52,9 @@ struct VisitorsBlockPlaceholder: View {
             
             Picker("", selection: $selectedRange) {
                 ForEach(TimeRange.allCases) { range in
-                    Text(range.rawValue).tag(range)
+                    Text(range.rawValue)
+                        .tag(range)
+                        .font(.gilroy(.bold, size: 15))
                 }
             }
             .pickerStyle(.segmented)

@@ -55,7 +55,6 @@ private extension StatisticsView {
                 VisitorsBlockPlaceholder(statistics: viewModel.statistics)
                 FrequentVisitorsPlaceholder()
                 GenderAgeChartPlaceholder(viewModel: viewModel)
-                
                 SubscribersBlockPlaceholder(viewModel: viewModel)
             }
             .padding()
